@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS Mini Projects</title>
+    <script src="https://kit.fontawesome.com/78d7470de0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="--header --section">
+        <h1>Form Submit</h1>
+    </header>
+    <main class="form --section">
+        <div class="form__container">
+            <section class="form__header">
+                <h2>Submit a Tool</h2>
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </section>
+            <form>
+                <div class="form__field">
+                    <lable class="form__lable" for='name'>name</lable>
+                    <input type="text" id='name' class="form__input" placeholder="UI Designe Daily">
+                </div>
+                <div class="form__field">
+                    <lable class="form__lable" for='link'>Link to resourse</lable>
+                    <input type="text" id='link' class="form__input" placeholder="https://www.uidailydesign.com">
+                </div>
+                <div class="form__field">
+                    <lable class="form__lable">Select category</lable>
+                    <select class="form__input" name="category" id="category">
+                        <option value="" selected disabled hidden>Select category</option>
+                        <option value="first category">First category</option>
+                        <option value="second category">Second category</option>
+                        <option value="third category">Third category</option>
+                    </select>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <!-- footer navbar -->
+    <footer class="--section">
+        <nav class="navbar --section-centered">
+            <ul class="navbar__menu">
+                <li class="navbar__link"><a href="./index.html">Home</a></li>
+                <li class="navbar__link"><a href=""></a></li>
+                <li class="navbar__link"><a href=""></a></li>
+                <li class="navbar__link"><a href=""></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <!-- end of footer navbar -->
+</body>
+
+</html>

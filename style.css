@@ -140,7 +140,7 @@ Index: Main Header
 ============
 */
 .main-header {
-  background: var(--clr-primary);
+  background: var(--clr-color-grey);
   padding: 3rem 0;
   text-align: center;
   /* min-height: 30vh; */
@@ -152,7 +152,7 @@ Index: Main Header
 }
 
 .main-header__heading {
-  color: var(--clr-black);
+  /* color: var(--clr-grey); */
   text-transform: capitalize;
   font-size: 2.5rem;
 }
@@ -195,12 +195,18 @@ footer {
 }
 
 .navbar__link a {
-  color: var(--clr-primary-light);
+  color: var(--clr-grey-light);
   transition: var(--transition);
 }
 
 .navbar__link a:hover {
-  color: var(--clr-grey-light);
+  color: var(--clr-primary-light);
+}
+
+.navbar__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* 
@@ -210,7 +216,7 @@ Index: Main Content
 */
 
 .main-content {
-  background: var(--clr-off-white);
+  background: var(--clr-white);
   min-height: calc(100vh - 15rem);
 }
 
@@ -226,13 +232,18 @@ Index: Main Content
   min-height: 20rem;
   border-radius: var(--radius-min);
   box-shadow: var(--shadow);
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem auto;
   max-width: 24rem;
 }
 
 .main-content__project h4 {
   text-transform: capitalize;
   padding: 1rem 0;
+  transition: var(--transition);
+}
+
+.main-content__project:hover h4 {
+  color: var(--clr-primary-light);
 }
 
 .main-content__project img {
@@ -240,6 +251,8 @@ Index: Main Content
   border-top-left-radius: var(--radius-min);
   border-top-right-radius: var(--radius-min);
 }
+
+
 
 /* 
 ============
@@ -368,8 +381,117 @@ Profile Cards: Card-3
     column-gap: 1.5rem;
     align-items: center;
   }
+
   .profile__card-3-info h4 {
     text-align: left;
     margin-left: 1rem;
   }
+}
+
+/* 
+============
+Submit Form: Main Content
+============
+*/
+
+main {
+  background-color: var(--clr-grey-light);
+  display: grid;
+  place-items: center;
+}
+
+.form__container {
+  background: var(--clr-white);
+  /* padding: 2rem; */
+  border-radius: var(--radius-max);
+  width: 90vw;
+  max-width: 40rem;
+}
+
+.form__header {
+  background: var(--clr-black);
+  padding: 4rem 0;
+  border-top-left-radius: var(--radius-max);
+  border-top-right-radius: var(--radius-max);
+  position: relative;
+}
+
+.form__header h2 {
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.form__header button {
+  color: var(--clr-white);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.form__header button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+form {
+  width: 85%;
+  max-width: 30rem;
+  margin: 4rem auto;
+}
+
+.form__field {
+  margin-bottom: 2rem;
+}
+
+.form__lable,
+.form__input {
+  display: block;
+}
+
+.form__lable {
+  text-transform: capitalize;
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 2px solid var(--clr-black);
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  color: var(--clr-black);
+}
+
+.form__input::placeholder {
+  color: var(--clr-black);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  background-image: url(./img/form-submit/arrow-select.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 58%;
+  background-size: 0.9rem 0.9rem;
+
+}
+
+select:focus {
+  background-image: url(./img/form-submit/arrow-select-up.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 58%;
+  background-size: 0.9rem 0.9rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
 }

@@ -1,0 +1,370 @@
+/* 
+===========
+Color palette: https://coolors.co/36494e-457b9d-f74c00-fcbf49-fff8cc
+===========
+*/
+
+/* 
+============
+Font 'Ubuntu', regular 400, bold 700
+============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+/* 
+============
+Variables
+============
+*/
+:root {
+    --font: "Ubuntu", sans-serif;
+    --clr-white: #ffffff;
+    --clr-off-white: #fff8cc;
+    --clr-primary-light: #fcbf49;
+    --clr-primary: #f74c00;
+    --clr-grey-light: #e6ecf0;
+    --clr-color-grey: #457b9d;
+    --clr-grey: #899094;
+    --clr-black: #36494e;
+    --clr-jet-black: #000000;
+    --transition: all 0.3s ease;
+    --radius-min: 0.25rem;
+    --radius-max: 1.25rem;
+    --shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* 
+============
+Global classes
+============
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font), "Arial", "Helvetica";
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--clr-black);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--clr-black);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--clr-black);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.--section {
+    padding: 4rem 0;
+}
+
+.--section-centered {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    /* h3 {
+    font-size: 2.25rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  } */
+
+    .--section {
+        padding: 5rem 0;
+    }
+
+    .--section-centered {
+        width: 95vw;
+        max-width: 1170px;
+    }
+}
+
+/* 
+============
+Index: Main Header
+============
+*/
+.main-header {
+    background: var(--clr-color-grey);
+    padding: 3rem 0;
+    text-align: center;
+    /* min-height: 30vh; */
+}
+
+.main-header h1 {
+    color: var(--clr-white);
+    line-height: 1.5;
+}
+
+.main-header__heading {
+    /* color: var(--clr-grey); */
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
+    .main-header__heading {
+        font-size: 2.75rem;
+    }
+}
+
+.--header {
+    text-align: center;
+    background: var(--clr-grey-light);
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background: var(--clr-black);
+    color: var(--clr-white);
+    border: 2px solid var(--clr-black);
+    border-radius: var(--radius-min);
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--clr-white);
+    color: var(--clr-black);
+}
+
+/* 
+============
+Global: Footer Navbar
+============
+*/
+footer {
+    background: var(--clr-black);
+}
+
+.navbar__link a {
+    color: var(--clr-grey-light);
+    transition: var(--transition);
+}
+
+.navbar__link a:hover {
+    color: var(--clr-primary-light);
+}
+
+.navbar__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 
+============
+Content
+============
+*/
+
+main {
+    background: var(--clr-grey-light);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: var(--clr-white);
+    width: 90vw;
+    max-width: 1170px;
+    padding: 2.5rem;
+    border-radius: var(--radius-min);
+    box-shadow: var(--shadow);
+
+}
+
+.sign__info {
+    display: none;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form__lable,
+.form__input {
+    display: block;
+}
+
+.form__field {
+    margin-bottom: 2rem;
+}
+
+.form__lable {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--clr-black);
+}
+
+.form__input {
+    border: 1px solid var(--clr-color-grey);
+    border-radius: var(--radius-min);
+    padding: 1.25rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    color: var(--clr-black);
+    font-size: 1rem;
+}
+
+.form__input::placeholder {
+    font-size: 1rem;
+    color: var(--clr-color-grey);
+}
+
+.form__checkbox {
+    appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--clr-color-grey);
+    border-radius: var(--radius-min);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__checkbox:hover {
+    background: var(--clr-grey-light);
+}
+
+.form__checkbox::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f00c';
+    color: var(--clr-white);
+    font-size: 1.1rem;
+    display: none;
+}
+
+.form__checkbox:checked {
+    background: var(--clr-black);
+}
+
+.form__checkbox:checked::after {
+    display: block;
+}
+
+.form__checkbox-lable {
+    color: var(--clr-color-grey);
+    font-size: 0.875rem;
+}
+
+.checkbox__field {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 1.25rem;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+
+    .sign__info {
+        display: block;
+        background: linear-gradient(to bottom right, var(--clr-color-grey), var(--clr-black));
+        border-radius: var(--radius-min);
+        color: var(--clr-white);
+        padding: 4rem;
+        min-height: 48rem;
+    }
+
+    .sign__info h4,
+    .sign__info p {
+        color: var(--clr-white);
+    }
+
+    .sign__info h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sign__info p {
+        font-size: 0.875rem;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 1rem;
+    }
+
+    .sign__info-unit {
+        margin-bottom: 2.5rem;
+        max-width: 14rem;
+    }
+}
