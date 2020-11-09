@@ -132,7 +132,7 @@ li {
 
     .--section-centered {
         width: 95vw;
-        max-width: 1170px;
+        max-width: 992px;
     }
 }
 
@@ -141,11 +141,30 @@ li {
 Main
 ============
 */
+.pricing-cards__header {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-gap: 4rem;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(26.75rem, 1fr));
+    }
+}
+
 .card {
     background: var(--clr-white);
     padding: 4rem 3.5rem;
     border-radius: var(--radius-max);
-    margin-bottom: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 30rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
 }
 
 .header h4 {
@@ -172,6 +191,10 @@ Main
 .price,
 .services {
     padding-left: 3rem;
+}
+
+.services {
+    margin-bottom: 4rem;
 }
 
 .service {
@@ -210,4 +233,28 @@ Main
 .btn:hover {
     background: var(--clr-white);
     color: var(--clr-black);
+}
+
+.pro {
+    background: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.pro h4,
+.pro p,
+.pro .price,
+.pro .service {
+    color: var(--clr-white);
+}
+
+.pro .btn {
+    background: var(--clr-white);
+    color: var(--clr-black);
+    border-color: var(--clr-white);
+}
+
+.pro .btn:hover {
+    color: var(--clr-white);
+    background: var(--clr-black);
+    border-color: var(--clr-white);
 }
