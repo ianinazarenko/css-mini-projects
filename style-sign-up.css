@@ -31,6 +31,7 @@ Variables
     --radius-min: 0.25rem;
     --radius-max: 1.25rem;
     --shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    --spacing: 0.1rem;
 }
 
 /* 
@@ -229,7 +230,6 @@ main {
     padding: 2.5rem;
     border-radius: var(--radius-min);
     box-shadow: var(--shadow);
-
 }
 
 .sign__info {
@@ -288,9 +288,9 @@ h1 {
 }
 
 .form__checkbox::after {
-    font-family: 'Font Awesome 5 Free';
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: '\f00c';
+    content: "\f00c";
     color: var(--clr-white);
     font-size: 1.1rem;
     display: none;
@@ -331,7 +331,11 @@ h1 {
 
     .sign__info {
         display: block;
-        background: linear-gradient(to bottom right, var(--clr-color-grey), var(--clr-black));
+        background: linear-gradient(
+            to bottom right,
+            var(--clr-color-grey),
+            var(--clr-black)
+        );
         border-radius: var(--radius-min);
         color: var(--clr-white);
         padding: 4rem;

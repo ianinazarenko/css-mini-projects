@@ -1,0 +1,213 @@
+/* 
+===========
+Color palette: https://coolors.co/36494e-457b9d-f74c00-fcbf49-fff8cc
+===========
+*/
+
+/* 
+============
+Font 'Ubuntu', regular 400, bold 700
+============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+/* 
+============
+Variables
+============
+*/
+:root {
+    --font: "Ubuntu", sans-serif;
+    --clr-white: #ffffff;
+    --clr-off-white: #fff8cc;
+    --clr-primary-light: #fcbf49;
+    --clr-primary: #f74c00;
+    --clr-grey-light: #e6ecf0;
+    --clr-color-grey: #457b9d;
+    --clr-grey: #899094;
+    --clr-black: #36494e;
+    --clr-jet-black: #000000;
+    --transition: all 0.3s ease;
+    --radius-min: 0.25rem;
+    --radius-max: 1.25rem;
+    --shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    --spacing: 0.1rem;
+}
+
+/* 
+============
+Global classes
+============
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font), "Arial", "Helvetica";
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--clr-black);
+    line-height: 1.5;
+    background: var(--clr-grey-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--clr-black);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--clr-black);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.--section {
+    padding: 4rem 0;
+}
+
+.--section-centered {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    /* h3 {
+    font-size: 2.25rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  } */
+
+    .--section {
+        padding: 5rem 0;
+    }
+
+    .--section-centered {
+        width: 95vw;
+        max-width: 1170px;
+    }
+}
+
+/* 
+============
+Main
+============
+*/
+.card {
+    background: var(--clr-white);
+    padding: 4rem 3.5rem;
+    border-radius: var(--radius-max);
+    margin-bottom: 2rem;
+}
+
+.header h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 0.875rem;
+    color: var(--clr-grey);
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 3.25rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.header,
+.price,
+.services {
+    padding-left: 3rem;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--clr-black);
+    color: var(--clr-white);
+    font-size: 0.875rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    border: 0.2rem solid var(--clr-black);
+    border-radius: 4rem;
+    background: var(--clr-black);
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--clr-white);
+    color: var(--clr-black);
+}

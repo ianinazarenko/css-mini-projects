@@ -1,37 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>CSS Mini Projects</title>
-    <script
-      src="https://kit.fontawesome.com/78d7470de0.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header class="pricing-cards__header --section">
-      <h1>Pricing Cards</h1>
-    </header>
-    <main class="pricing --section">
-      <div class="pricing container --section-centered">
-        <!-- single card -->
-        <article class="pricing__card"></article>
-        <!-- end of single card -->
-      </div>
-    </main>
-    <!-- footer navbar -->
-    <footer class="--section">
-      <nav class="navbar --section-centered">
-        <ul class="navbar__menu">
-          <li class="navbar__link"><a href="./index.html">Home</a></li>
-          <li class="navbar__link"><a href=""></a></li>
-          <li class="navbar__link"><a href=""></a></li>
-          <li class="navbar__link"><a href=""></a></li>
-        </ul>
-      </nav>
-    </footer>
-    <!-- end of footer navbar -->
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style-pricing.css" />
+        <title>CSS Mini Projects</title>
+        <script
+            src="https://kit.fontawesome.com/78d7470de0.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header class="pricing-cards__header --section">
+            <h1>Pricing Cards</h1>
+        </header>
+        <main class="pricing --section">
+            <div class="container --section-centered">
+                <!-- single card -->
+                <article class="card free">
+                    <div class="header">
+                        <h4>Free</h4>
+                        <p>For freelancers</p>
+                    </div>
+                    <div class="price">$0</div>
+                    <div class="services">
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>1 User</p>
+                        </div>
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>10 Downloads Per Month</p>
+                        </div>
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>Raster Files</p>
+                        </div>
+                    </div>
+                    <button class="btn">Subscribe</button>
+                </article>
+                <!-- end of single card -->
+                <!-- single card -->
+                <article class="card free">
+                    <div class="header">
+                        <h4>Pro</h4>
+                        <p>For agencies</p>
+                    </div>
+                    <p class="price">$40</p>
+                    <div class="services">
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>3 Users</p>
+                        </div>
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>Unlimited Downloads</p>
+                        </div>
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>Fully-Editable Files</p>
+                        </div>
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>Custom Packs</p>
+                        </div>
+                        <div class="service">
+                            <span class="icon">
+                                <i class="fas fa-check"> </i>
+                            </span>
+                            <p>200+ Custom Packs</p>
+                        </div>
+                    </div>
+                    <button class="btn">Subscribe</button>
+                </article>
+                <!-- end of single card -->
+                <article class="card pro"></article>
+            </div>
+        </main>
+        <!-- footer navbar -->
+        <footer class="--section">
+            <nav class="navbar --section-centered">
+                <ul class="navbar__menu">
+                    <li class="navbar__link">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="navbar__link"><a href=""></a></li>
+                    <li class="navbar__link"><a href=""></a></li>
+                    <li class="navbar__link"><a href=""></a></li>
+                </ul>
+            </nav>
+        </footer>
+        <!-- end of footer navbar -->
+    </body>
 </html>
